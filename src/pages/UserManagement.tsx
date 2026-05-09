@@ -78,7 +78,8 @@ const UserManagement: React.FC = () => {
   const handleAddUserSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // 生成新用户ID
-    const newUserId = users.length + 1;
+    const maxId = users.reduce((max, user) => Math.max(max, user.id), 0);
+    const newUserId = maxId + 1;
     // 创建新用户对象
     const userToAdd = {
       id: newUserId,
