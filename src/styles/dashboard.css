@@ -1,0 +1,136 @@
+/* Dashboard Layout - Premium Design */
+.dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: var(--bg-light-gray);
+  position: relative;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* KPI Grid - Optimized spacing */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+/* Charts Grid System */
+.charts-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 24px;
+  width: 100%;
+}
+
+.charts-row:last-of-type {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Chart Columns */
+.chart-col-lg {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-col-sm {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer Section */
+.dashboard-footer {
+  padding: 24px;
+  text-align: center;
+  color: var(--text-light-gray);
+  font-size: 13px;
+  border-top: 1px solid var(--border-gray);
+  background-color: var(--bg-white);
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.dashboard-footer p {
+  margin: 0;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1600px) {
+  .dashboard-content {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .charts-row {
+    grid-template-columns: minmax(0, 1fr) 340px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .charts-row {
+    grid-template-columns: 1fr;
+  }
+
+  .charts-row:last-of-type {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .chart-col-sm {
+    width: 100%;
+  }
+
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .charts-row {
+    gap: 16px;
+  }
+  
+  .charts-row:last-of-type {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation wrappers for entering elements */
+.kpi-grid > *:nth-child(1) { animation: fadeIn 0.4s ease-out 0.1s backwards; }
+.kpi-grid > *:nth-child(2) { animation: fadeIn 0.4s ease-out 0.2s backwards; }
+.kpi-grid > *:nth-child(3) { animation: fadeIn 0.4s ease-out 0.3s backwards; }
+.kpi-grid > *:nth-child(4) { animation: fadeIn 0.4s ease-out 0.4s backwards; }
+
+.charts-row:nth-of-type(2) { animation: fadeIn 0.5s ease-out 0.5s backwards; }
+.charts-row:nth-of-type(3) { animation: fadeIn 0.5s ease-out 0.6s backwards; }

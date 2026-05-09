@@ -1,0 +1,136 @@
+/* KPI Card - Enhanced Premium Styling */
+.kpi-card {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+}
+
+.kpi-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+/* Header Section */
+.kpi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.kpi-title {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.kpi-icon {
+  font-size: 32px;
+  opacity: 0.8;
+  transition: var(--transition);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.kpi-card:hover .kpi-icon {
+  transform: scale(1.1) rotate(-5deg);
+  opacity: 1;
+}
+
+/* Value Section */
+.kpi-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.1;
+  position: relative;
+  z-index: 1;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+
+.kpi-unit {
+  font-size: 16px;
+  color: var(--text-light-gray);
+  margin-left: 4px;
+  font-weight: 500;
+}
+
+/* Trend Indicator - Pill Badge Style */
+.kpi-trend {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  transition: var(--transition);
+  margin-bottom: 12px;
+}
+
+.kpi-trend.positive {
+  color: var(--secondary-green);
+  background-color: var(--secondary-green-light);
+}
+
+.kpi-trend.negative {
+  color: var(--secondary-red);
+  background-color: var(--secondary-red-light);
+}
+
+.kpi-trend svg {
+  transition: var(--transition);
+}
+
+.kpi-card:hover .kpi-trend svg {
+  animation: float 1s ease-in-out infinite;
+}
+
+.trend-text {
+  margin-left: 2px;
+}
+
+/* Description */
+.kpi-description {
+  font-size: 12px;
+  color: var(--text-light-gray);
+  margin-top: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .kpi-value {
+    font-size: 28px;
+  }
+
+  .kpi-icon {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kpi-card {
+    padding: 20px;
+  }
+
+  .kpi-value {
+    font-size: 24px;
+  }
+}

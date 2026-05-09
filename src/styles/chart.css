@@ -1,0 +1,44 @@
+/* Chart Containers - Premium Styling */
+.chart-container {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+  position: relative;
+}
+
+.chart-container:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  border-color: rgba(155, 125, 212, 0.2);
+}
+
+/* Chart Title inside container (if we move title logic to CSS) */
+.chart-container h3 {
+  color: #374151;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Loading state placeholder */
+.chart-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* Ensure canvas is properly sized */
+.chart-container > div {
+  width: 100%;
+  height: 100%;
+}
