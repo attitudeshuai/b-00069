@@ -59,7 +59,7 @@ const PermissionManagement: React.FC = () => {
   };
 
   const handleAddRole = () => {
-    if (newRole.name || newRole.description) {
+    if (newRole.name && newRole.description) {
       const roleId = newRole.name.toLowerCase().replace(/\s+/g, '_');
       const newRoleObj = {
         id: roleId,
